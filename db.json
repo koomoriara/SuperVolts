@@ -1,0 +1,637 @@
+{
+  "usuarios": [
+    {
+      "id": "usr-1",
+      "nome": "Administrador",
+      "email": "admin@supervolts.com",
+      "senha": "123456",
+      "tipo": "proprietario",
+      "ativo": true,
+      "permissoes": [
+        "dashboard",
+        "clientes",
+        "projetos",
+        "equipes",
+        "estoque",
+        "financeiro",
+        "relatorios",
+        "configuracoes"
+      ]
+    },
+    {
+      "id": "usr-2",
+      "nome": "Ricardo Almeida",
+      "email": "gestor@supervolts.com",
+      "senha": "123456",
+      "tipo": "gestor",
+      "ativo": true,
+      "permissoes": [
+        "dashboard",
+        "clientes",
+        "projetos",
+        "equipes",
+        "estoque",
+        "relatorios",
+        "configuracoes"
+      ]
+    },
+    {
+      "id": "I4aWOAoH--w",
+      "nome": "iara rikaely",
+      "email": "iara@gmail.com",
+      "senha": "123456",
+      "tipo": "gestor",
+      "ativo": true,
+      "permissoes": [
+        "clientes",
+        "equipes",
+        "estoque"
+      ]
+    }
+  ],
+  "empresa": {
+    "nome": "Super Volts Solar",
+    "telefone": "(84) 99999-0000",
+    "email": "contato@supervolts.com",
+    "endereco": "Parelhas - RN"
+  },
+  "clientes": [
+    {
+      "id": "cli-1",
+      "nome": "Ricardo Alexandre",
+      "documento": "123.456.789-00",
+      "telefone": "(84) 98888-1111",
+      "email": "ricardo@email.com",
+      "endereco": "Rua das Palmeiras, 120",
+      "dataCadastro": "2026-01-10",
+      "consumoMensal": 1740,
+      "tarifaKwh": 0.95,
+      "observacoes": "Cliente residencial."
+    },
+    {
+      "id": "cli-2",
+      "nome": "Maria Souza",
+      "documento": "987.654.321-00",
+      "telefone": "(84) 97777-2222",
+      "email": "maria@email.com",
+      "endereco": "Av. Central, 540",
+      "dataCadastro": "2026-02-14",
+      "consumoMensal": 1300,
+      "tarifaKwh": 0.92,
+      "observacoes": "Interesse em expansão futura."
+    },
+    {
+      "id": "YBLb-Tv5E50",
+      "nome": "Maria de Fatima Medeiros",
+      "documento": "123.567.987-43",
+      "telefone": "83 94565 4565",
+      "email": "maria@gmail.com",
+      "endereco": "911",
+      "dataCadastro": "2026-11-20",
+      "consumoMensal": 60,
+      "tarifaKwh": 0.5,
+      "observacoes": ""
+    }
+  ],
+  "projetos": [
+    {
+      "id": "prj-1",
+      "codigo": "SV-2026-001",
+      "clienteId": "cli-1",
+      "valorContrato": 45000,
+      "potenciaKwp": 12,
+      "custoPorKwp": 2884.62,
+      "margemLucro": 30,
+      "custoEstimado": 34615.38,
+      "lucroPrevisto": 10384.62,
+      "dataContratacao": "2026-01-15",
+      "responsavel": "Ricardo Almeida",
+      "dataPrevista": "2026-12-20",
+      "dataConclusao": null,
+      "situacao": "Em andamento",
+      "observacoes": "Projeto residencial de 12 kWp.",
+      "etapas": [
+        {
+          "nome": "Contrato fechado",
+          "situacao": "concluida",
+          "dataInicio": "2026-01-15",
+          "dataConclusao": "2026-01-16",
+          "responsavel": "Comercial",
+          "observacoes": "Contrato assinado.",
+          "dependencia": "empresa"
+        },
+        {
+          "nome": "Análise técnica",
+          "situacao": "concluida",
+          "dataInicio": "2026-01-18",
+          "dataConclusao": "2026-01-22",
+          "responsavel": "Equipe técnica",
+          "observacoes": "",
+          "dependencia": "empresa"
+        },
+        {
+          "nome": "Elaboração do projeto",
+          "situacao": "concluida",
+          "dataInicio": "2026-01-23",
+          "dataConclusao": "2026-02-02",
+          "responsavel": "Engenharia",
+          "observacoes": "",
+          "dependencia": "empresa"
+        },
+        {
+          "nome": "Homologação",
+          "situacao": "em andamento",
+          "dataInicio": "2026-02-03",
+          "dataConclusao": "",
+          "responsavel": "Documentação",
+          "observacoes": "Aguardando retorno da concessionária.",
+          "dependencia": "concessionaria"
+        },
+        {
+          "nome": "Compra e recebimento",
+          "situacao": "em andamento",
+          "dataInicio": "2026-02-10",
+          "dataConclusao": "",
+          "responsavel": "Compras",
+          "observacoes": "Painéis reservados.",
+          "dependencia": "fornecedor"
+        },
+        {
+          "nome": "Planejamento da instalação",
+          "situacao": "não iniciada",
+          "dataInicio": "",
+          "dataConclusao": "",
+          "responsavel": "Coordenação",
+          "observacoes": "",
+          "dependencia": "empresa"
+        },
+        {
+          "nome": "Instalação",
+          "situacao": "não iniciada",
+          "dataInicio": "",
+          "dataConclusao": "",
+          "responsavel": "",
+          "observacoes": "",
+          "dependencia": "empresa"
+        },
+        {
+          "nome": "Vistoria e ativação",
+          "situacao": "não iniciada",
+          "dataInicio": "",
+          "dataConclusao": "",
+          "responsavel": "",
+          "observacoes": "",
+          "dependencia": "terceiros"
+        },
+        {
+          "nome": "Projeto concluído",
+          "situacao": "não iniciada",
+          "dataInicio": "",
+          "dataConclusao": "",
+          "responsavel": "",
+          "observacoes": "",
+          "dependencia": "empresa"
+        }
+      ],
+      "historicoEtapas": []
+    },
+    {
+      "id": "prj-2",
+      "codigo": "SV-2026-002",
+      "clienteId": "cli-2",
+      "valorContrato": 35000,
+      "potenciaKwp": 8.97,
+      "custoPorKwp": 3000,
+      "margemLucro": 30,
+      "custoEstimado": 26910,
+      "lucroPrevisto": 8073,
+      "dataContratacao": "2026-03-01",
+      "responsavel": "Ricardo Almeida",
+      "dataPrevista": "2026-11-30",
+      "dataConclusao": "2026-11-15",
+      "situacao": "Concluído",
+      "observacoes": "Projeto concluído e ativado.",
+      "etapas": [],
+      "historicoEtapas": []
+    },
+    {
+      "id": "pTROVMsRoOU",
+      "codigo": "SV-2026-003",
+      "clienteId": "YBLb-Tv5E50",
+      "potenciaKwp": 0.41,
+      "custoPorKwp": 3000,
+      "margemLucro": 30,
+      "custoEstimado": 1230,
+      "lucroPrevisto": 369,
+      "valorContrato": 1599,
+      "dataContratacao": "2026-11-20",
+      "responsavel": "ricardo",
+      "dataPrevista": "2026-11-30",
+      "dataConclusao": null,
+      "situacao": "Não iniciado",
+      "observacoes": "",
+      "etapas": [
+        {
+          "nome": "Contrato fechado",
+          "situacao": "concluida",
+          "dataInicio": "",
+          "dataConclusao": "",
+          "responsavel": "",
+          "observacoes": "",
+          "dependencia": "empresa"
+        },
+        {
+          "nome": "Análise técnica",
+          "situacao": "não iniciada",
+          "dataInicio": "",
+          "dataConclusao": "",
+          "responsavel": "",
+          "observacoes": "",
+          "dependencia": "empresa"
+        },
+        {
+          "nome": "Elaboração do projeto",
+          "situacao": "não iniciada",
+          "dataInicio": "",
+          "dataConclusao": "",
+          "responsavel": "",
+          "observacoes": "",
+          "dependencia": "empresa"
+        },
+        {
+          "nome": "Homologação junto à concessionária",
+          "situacao": "não iniciada",
+          "dataInicio": "",
+          "dataConclusao": "",
+          "responsavel": "",
+          "observacoes": "",
+          "dependencia": "empresa"
+        },
+        {
+          "nome": "Compra e recebimento dos equipamentos",
+          "situacao": "não iniciada",
+          "dataInicio": "",
+          "dataConclusao": "",
+          "responsavel": "",
+          "observacoes": "",
+          "dependencia": "empresa"
+        },
+        {
+          "nome": "Planejamento da instalação",
+          "situacao": "não iniciada",
+          "dataInicio": "",
+          "dataConclusao": "",
+          "responsavel": "",
+          "observacoes": "",
+          "dependencia": "empresa"
+        },
+        {
+          "nome": "Instalação",
+          "situacao": "não iniciada",
+          "dataInicio": "",
+          "dataConclusao": "",
+          "responsavel": "",
+          "observacoes": "",
+          "dependencia": "empresa"
+        },
+        {
+          "nome": "Vistoria e ativação",
+          "situacao": "não iniciada",
+          "dataInicio": "",
+          "dataConclusao": "",
+          "responsavel": "",
+          "observacoes": "",
+          "dependencia": "empresa"
+        },
+        {
+          "nome": "Projeto concluído",
+          "situacao": "não iniciada",
+          "dataInicio": "",
+          "dataConclusao": "",
+          "responsavel": "",
+          "observacoes": "",
+          "dependencia": "empresa"
+        }
+      ],
+      "historicoEtapas": []
+    }
+  ],
+  "equipes": [
+    {
+      "id": "eq-1",
+      "nome": "Carlos Mendonça",
+      "funcao": "Engenheiro Eletricista",
+      "telefone": "(84) 98888-3001",
+      "especialidade": "Responsável Técnico; ART; Segurança da instalação",
+      "salario": 8500,
+      "situacao": "ativo"
+    },
+    {
+      "id": "eq-2",
+      "nome": "Ana Lima",
+      "funcao": "Projetista Fotovoltaico",
+      "telefone": "(84) 98888-3002",
+      "especialidade": "Dimensionamento; plantas; unifilar; homologação",
+      "salario": 6500,
+      "situacao": "ativo"
+    },
+    {
+      "id": "eq-3",
+      "nome": "João Silva",
+      "funcao": "Técnico em Eletrotécnica",
+      "telefone": "(84) 98888-3003",
+      "especialidade": "Vistoria técnica; projetos; comissionamento",
+      "salario": 4200,
+      "situacao": "ativo"
+    },
+    {
+      "id": "eq-4",
+      "nome": "Marcos Oliveira",
+      "funcao": "Instalador Fotovoltaico",
+      "telefone": "(84) 98888-3004",
+      "especialidade": "Montagem mecânica; fixação; conexão elétrica",
+      "salario": 2500,
+      "situacao": "ativo"
+    },
+    {
+      "id": "eq-5",
+      "nome": "Pedro Santos",
+      "funcao": "Auxiliar de Instalação",
+      "telefone": "(84) 98888-3005",
+      "especialidade": "Movimentação de materiais; ferramentas; montagem",
+      "salario": 1800,
+      "situacao": "ativo"
+    },
+    {
+      "id": "eq-6",
+      "nome": "Rafael Costa",
+      "funcao": "Técnico de Manutenção e O&M",
+      "telefone": "(84) 98888-3006",
+      "especialidade": "Limpeza; inspeções; manutenção; pós-venda",
+      "salario": 2800,
+      "situacao": "ativo"
+    },
+    {
+      "id": "eq-7",
+      "nome": "Fernanda Rocha",
+      "funcao": "Consultora de Vendas",
+      "telefone": "(84) 98888-3007",
+      "especialidade": "Análise de conta de luz; orçamento; contratos",
+      "salario": 3000,
+      "situacao": "ativo"
+    },
+    {
+      "id": "eq-8",
+      "nome": "Lucas Martins",
+      "funcao": "Pré-vendas (SDR)",
+      "telefone": "(84) 98888-3008",
+      "especialidade": "Captação; qualificação; agendamento",
+      "salario": 2500,
+      "situacao": "ativo"
+    },
+    {
+      "id": "eq-9",
+      "nome": "Bianca Alves",
+      "funcao": "Analista de Marketing",
+      "telefone": "(84) 98888-3009",
+      "especialidade": "Anúncios; redes sociais; eventos; geração de leads",
+      "salario": 3500,
+      "situacao": "ativo"
+    },
+    {
+      "id": "eq-10",
+      "nome": "Juliana Freitas",
+      "funcao": "Analista de Homologação",
+      "telefone": "(84) 98888-3010",
+      "especialidade": "Protocolos; prazos; concessionária",
+      "salario": 3000,
+      "situacao": "ativo"
+    },
+    {
+      "id": "eq-11",
+      "nome": "Bruno Lima",
+      "funcao": "Comprador / Analista de Suprimentos",
+      "telefone": "(84) 98888-3011",
+      "especialidade": "Cotação; compra de kits; controle de estoque",
+      "salario": 3500,
+      "situacao": "ativo"
+    },
+    {
+      "id": "eq-12",
+      "nome": "Patrícia Gomes",
+      "funcao": "Assistente Administrativo / Financeiro",
+      "telefone": "(84) 98888-3012",
+      "especialidade": "Contratos; notas fiscais; contas; financiamentos",
+      "salario": 2600,
+      "situacao": "ativo"
+    },
+    {
+      "id": "eq-13",
+      "nome": "Ricardo Almeida",
+      "funcao": "Gestor / Coordenador de Obras",
+      "telefone": "(84) 98888-3013",
+      "especialidade": "Cronograma; equipes; qualidade; EPIs; NR-10; NR-35",
+      "salario": 5500,
+      "situacao": "ativo"
+    }
+  ],
+  "atividades": [
+    {
+      "id": "atv-1",
+      "titulo": "Finalizar análise técnica",
+      "descricao": "Conferir dimensionamento e acesso ao telhado.",
+      "projetoId": "prj-1",
+      "funcionarioId": "eq-1",
+      "dataInicio": "2026-11-20",
+      "prazo": "2026-11-27",
+      "situacao": "Pendente"
+    },
+    {
+      "id": "atv-2",
+      "titulo": "Preparar documentação",
+      "descricao": "Organizar documentos da homologação.",
+      "projetoId": "prj-1",
+      "funcionarioId": "eq-2",
+      "dataInicio": "2026-11-18",
+      "prazo": "2026-11-24",
+      "situacao": "Concluída"
+    }
+  ],
+  "produtos": [
+    {
+      "id": "prod-1",
+      "nome": "Painel solar 550W",
+      "codigo": "PA-550",
+      "categoria": "Módulos solares",
+      "quantidade": 74,
+      "unidade": "un",
+      "quantidadeMinima": 5,
+      "precoCompra": 950,
+      "fornecedor": "Energia Norte"
+    },
+    {
+      "id": "prod-2",
+      "nome": "Inversor 8 kW",
+      "codigo": "INV-8",
+      "categoria": "Inversores",
+      "quantidade": 3,
+      "unidade": "un",
+      "quantidadeMinima": 2,
+      "precoCompra": 5200,
+      "fornecedor": "Solar Brasil"
+    },
+    {
+      "id": "prod-3",
+      "nome": "Kit fotovoltaico residencial 5 kWp",
+      "codigo": "KIT-5",
+      "categoria": "Kits fotovoltaicos",
+      "quantidade": 4,
+      "unidade": "kit",
+      "quantidadeMinima": 2,
+      "precoCompra": 14500,
+      "fornecedor": "Distribuidora Solar Nordeste"
+    },
+    {
+      "id": "prod-4",
+      "nome": "Estrutura para telhado cerâmico",
+      "codigo": "EST-TELHA",
+      "categoria": "Estruturas de fixação",
+      "quantidade": 32,
+      "unidade": "conjunto",
+      "quantidadeMinima": 10,
+      "precoCompra": 420,
+      "fornecedor": "Estruturas RN"
+    },
+    {
+      "id": "prod-5",
+      "nome": "Cabo solar CC 4 mm",
+      "codigo": "CAB-CC4",
+      "categoria": "Cabos e conectores",
+      "quantidade": 500,
+      "unidade": "m",
+      "quantidadeMinima": 100,
+      "precoCompra": 8,
+      "fornecedor": "Energia Norte"
+    },
+    {
+      "id": "prod-6",
+      "nome": "Conector MC4",
+      "codigo": "MC4-UN",
+      "categoria": "Cabos e conectores",
+      "quantidade": 120,
+      "unidade": "par",
+      "quantidadeMinima": 30,
+      "precoCompra": 12,
+      "fornecedor": "Solar Brasil"
+    },
+    {
+      "id": "prod-7",
+      "nome": "String box CC 2 entradas",
+      "codigo": "SB-CC2",
+      "categoria": "Proteção elétrica",
+      "quantidade": 8,
+      "unidade": "un",
+      "quantidadeMinima": 3,
+      "precoCompra": 680,
+      "fornecedor": "Proteção Solar"
+    },
+    {
+      "id": "prod-8",
+      "nome": "Dispositivo de proteção contra surtos DPS",
+      "codigo": "DPS-CC",
+      "categoria": "Proteção elétrica",
+      "quantidade": 16,
+      "unidade": "un",
+      "quantidadeMinima": 5,
+      "precoCompra": 260,
+      "fornecedor": "Proteção Solar"
+    },
+    {
+      "id": "prod-9",
+      "nome": "Bateria estacionária 12V 150Ah",
+      "codigo": "BAT-150",
+      "categoria": "Baterias",
+      "quantidade": 6,
+      "unidade": "un",
+      "quantidadeMinima": 2,
+      "precoCompra": 2900,
+      "fornecedor": "Armazenamento Solar"
+    },
+    {
+      "id": "prod-10",
+      "nome": "Controlador de carga MPPT 60A",
+      "codigo": "MPPT-60",
+      "categoria": "Controladores de carga",
+      "quantidade": 4,
+      "unidade": "un",
+      "quantidadeMinima": 2,
+      "precoCompra": 1800,
+      "fornecedor": "Armazenamento Solar"
+    }
+  ],
+  "movimentacoes": [
+    {
+      "id": "mov-1",
+      "produtoId": "prod-1",
+      "tipo": "entrada",
+      "quantidade": 20,
+      "projetoId": null,
+      "data": "2026-11-10",
+      "observacoes": "Compra inicial"
+    },
+    {
+      "id": "YPKO06ITKa0",
+      "produtoId": "prod-1",
+      "tipo": "entrada",
+      "quantidade": 56,
+      "projetoId": "prj-1",
+      "data": "2026-11-20",
+      "observacoes": ""
+    }
+  ],
+  "receitas": [
+    {
+      "id": "rec-1",
+      "descricao": "Entrada do projeto SV-2026-001",
+      "clienteId": "cli-1",
+      "projetoId": "prj-1",
+      "valor": 25000,
+      "vencimento": "2026-11-20",
+      "recebimento": "2026-11-20",
+      "situacao": "Recebido"
+    },
+    {
+      "id": "rec-2",
+      "descricao": "Saldo do projeto SV-2026-001",
+      "clienteId": "cli-1",
+      "projetoId": "prj-1",
+      "valor": 20000,
+      "vencimento": "2026-12-20",
+      "recebimento": null,
+      "situacao": "Pendente"
+    }
+  ],
+  "despesas": [
+    {
+      "id": "des-1",
+      "descricao": "Compra de painéis",
+      "categoria": "Equipamentos",
+      "projetoId": "prj-1",
+      "valor": 15000,
+      "vencimento": "2026-11-10",
+      "pagamento": "2026-11-10",
+      "situacao": "Pago"
+    },
+    {
+      "id": "des-2",
+      "descricao": "Mão de obra da instalação",
+      "categoria": "Mão de obra",
+      "projetoId": "prj-1",
+      "valor": 8000,
+      "vencimento": "2026-12-10",
+      "pagamento": null,
+      "situacao": "Pendente"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

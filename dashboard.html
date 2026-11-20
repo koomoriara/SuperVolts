@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Super Volts Manager - Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/responsivo.css" rel="stylesheet">
+  <link href="css/dashboard.css" rel="stylesheet">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><img class="brand-logo" src="assets/imagens/logo-super-voltz.png" alt="Logo Super Volts" width="48" height="48"><div class="brand-text"><strong>SUPER VOLTS</strong><span>GESTÃO</span></div></div>
+      <nav class="sidebar-nav">
+        <a class="active" href="dashboard.html"><i class="bi bi-grid-fill"></i> Dashboard</a>
+        <a href="projetos.html"><i class="bi bi-house-gear-fill"></i> Projetos</a>
+        <a href="clientes.html"><i class="bi bi-person-vcard-fill"></i> Clientes</a>
+        <a href="estoque.html"><i class="bi bi-box-seam-fill"></i> Estoque</a>
+        <a href="equipes.html"><i class="bi bi-people-fill"></i> Equipes</a>
+        <a href="financeiro.html"><i class="bi bi-cash-stack"></i> Financeiro</a>
+        <a href="relatorios.html"><i class="bi bi-bar-chart-fill"></i> Relatórios</a>
+        <a href="configuracoes.html"><i class="bi bi-gear-fill"></i> Configurações</a>
+      </nav>
+      <div class="sidebar-footer"><a class="icon-button text-white" href="#" id="sair"><i class="bi bi-box-arrow-right"></i> Sair</a></div>
+    </aside>
+    <div class="overlay" id="overlay"></div>
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-title"><button class="menu-toggle" id="menuToggle"><i class="bi bi-list"></i></button><h1 id="saudacaoDashboard">Bem-vindo</h1></div>
+        <div class="topbar-actions"><a class="icon-button" href="configuracoes.html" aria-label="Configurações"><i class="bi bi-gear"></i></a><div class="profile"><div class="profile-avatar"><i class="bi bi-person-fill"></i></div><div class="profile-meta"><strong id="nomeUsuario"></strong><small id="tipoUsuario"></small></div></div></div>
+      </header>
+      <section class="content">
+        <section class="page-hero">
+          <div class="page-hero-copy">
+            <h2>SUPER VOLTS<br>GESTÃO</h2>
+            <p>Acompanhe os resultados e projetos da empresa em um só lugar.</p>
+          </div>
+        </section>
+        <section aria-labelledby="tituloProjetosPeriodo" class="dashboard-section">
+          <div class="dashboard-section-heading">
+            <div><span class="section-eyebrow">ACOMPANHAMENTO OPERACIONAL</span><h2 id="tituloProjetosPeriodo" class="visually-hidden">Projetos no período</h2></div>
+            <form class="period-filter-inline" id="filtroPeriodo" aria-label="Filtrar indicadores por período">
+              <label>De<input type="date" id="periodoInicio" required></label>
+              <label>Até<input type="date" id="periodoFim" required></label>
+              <button type="submit" class="period-filter-submit" aria-label="Aplicar filtro de período"><i class="bi bi-arrow-right"></i></button>
+              <span class="period-range" id="periodoSelecionado"></span>
+            </form>
+          </div>
+          <div class="dashboard-project-cards">
+            <article class="dashboard-metric metric-orange"><div class="metric-heading"><i class="bi bi-lightning-charge"></i><span>Em andamento</span></div><strong id="projetosAndamento">0</strong><small>Projetos nesta situação</small></article>
+            <article class="dashboard-metric"><div class="metric-heading"><i class="bi bi-folder2-open"></i><span>Cadastrados</span></div><strong id="totalProjetos">0</strong><small>Contratados no período</small></article>
+            <article class="dashboard-metric metric-blue"><div class="metric-heading"><i class="bi bi-check-circle"></i><span>Concluídos</span></div><strong id="projetosConcluidos">0</strong><small>Finalizados no período</small></article>
+            <article class="dashboard-metric"><div class="metric-heading"><i class="bi bi-exclamation-triangle"></i><span>Atrasados</span></div><strong id="projetosAtrasados">0</strong><small>Ativos com prazo ultrapassado</small></article>
+            <article class="dashboard-metric"><div class="metric-heading"><i class="bi bi-hourglass-split"></i><span>Aguardando Homologação</span></div><strong id="projetosHomologacao">0</strong><small>Aguardando concessionária</small></article>
+          </div>
+        </section>
+        <section aria-labelledby="tituloFinanceiroPeriodo" class="dashboard-section">
+          <div class="dashboard-section-heading"><div><span class="section-eyebrow">CONTROLE FINANCEIRO</span><h2 id="tituloFinanceiroPeriodo">Resumo financeiro</h2></div><span class="dashboard-note">Valores reais do sistema</span></div>
+          <div class="dashboard-finance-cards">
+            <article class="dashboard-metric metric-finance"><div class="metric-heading"><i class="bi bi-cash-coin"></i><span>Faturamento</span></div><strong id="faturamentoPeriodo">R$ 0,00</strong><small>Recebido no período</small></article>
+            <article class="dashboard-metric metric-finance"><div class="metric-heading"><i class="bi bi-credit-card"></i><span>Despesas</span></div><strong id="despesasPeriodo">R$ 0,00</strong><small>Pagas no período</small></article>
+            <article class="dashboard-metric metric-finance"><div class="metric-heading"><i class="bi bi-clock-history"></i><span>A receber</span></div><strong id="pendenteRecebimento">R$ 0,00</strong><small>Recebimentos pendentes</small></article>
+            <article class="dashboard-metric metric-finance metric-result"><div class="metric-heading"><i class="bi bi-graph-up-arrow"></i><span>Resultado</span></div><strong id="resultadoFinanceiro">R$ 0,00</strong><small>Recebido menos despesas pagas</small></article>
+          </div>
+        </section>
+        <section class="dashboard-analytics">
+          <article class="dashboard-panel project-chart-panel">
+            <div class="panel-heading"><div><span class="section-eyebrow">DESEMPENHO</span><h2>Progresso dos projetos</h2><p>Contratos e conclusões por mês</p></div><span class="chart-legend-dot"><i></i> Projetos</span></div>
+            <div class="dashboard-chart-wrap"><canvas id="graficoProjetos" aria-label="Gráfico de projetos contratados e concluídos por mês"></canvas></div>
+            <div class="chart-empty" id="vazioGraficoProjetos" hidden>Não há projetos no período selecionado.</div>
+          </article>
+          <article class="dashboard-panel recent-panel">
+            <div class="panel-heading"><div><span class="section-eyebrow">ACOMPANHAMENTO</span><h2>Projetos recentes</h2><p>Registros do período</p></div><a href="projetos.html" class="panel-link">Ver todos <i class="bi bi-arrow-up-right"></i></a></div>
+            <div id="listaProjetosRecentes"></div>
+          </article>
+        </section>
+        <section class="dashboard-analytics dashboard-bottom">
+          <article class="dashboard-panel finance-chart-panel">
+            <div class="panel-heading"><div><span class="section-eyebrow">FLUXO DE CAIXA</span><h2>Receitas e despesas</h2><p>Valores recebidos e pagos por mês</p></div></div>
+            <div class="dashboard-chart-wrap"><canvas id="graficoFinanceiro" aria-label="Gráfico de receitas e despesas por mês"></canvas></div>
+            <div class="chart-empty" id="vazioGraficoFinanceiro" hidden>Não há movimentações financeiras no período selecionado.</div>
+          </article>
+          <article class="dashboard-panel status-panel">
+            <div class="panel-heading"><div><span class="section-eyebrow">VISÃO GERAL</span><h2>Situação dos projetos</h2><p>Distribuição no período</p></div></div>
+            <div class="dashboard-chart-wrap status-chart-wrap"><canvas id="graficoSituacoes" aria-label="Distribuição dos projetos por situação"></canvas></div>
+            <div class="chart-empty" id="vazioGraficoSituacoes" hidden>Nenhum projeto encontrado no período.</div>
+          </article>
+        </section>
+        <section class="dashboard-panel dashboard-alert-panel">
+          <div class="panel-heading"><div><span class="section-eyebrow">ATENÇÃO</span><h2>Pendências e alertas</h2></div><a href="estoque.html" class="panel-link">Ver estoque <i class="bi bi-arrow-up-right"></i></a></div>
+          <div class="dashboard-alert-list" id="listaAlertas"></div>
+        </section>
+      </section>
+    </main>
+  </div>
+  <div class="toast-container"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js?v=20261120c"></script>
+  <script src="js/dashboard.js?v=20261120c"></script>
+</body>
+</html>
