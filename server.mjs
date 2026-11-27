@@ -10,7 +10,7 @@ const jsonServerBin = fileURLToPath(
 
 const server = spawn(
   process.execPath,
-  [jsonServerBin, "--watch", "db.json", "--host", host, "--port", port],
+  [jsonServerBin, "db.json", "--host", host, "--port", port],
   { stdio: "inherit" }
 );
 
