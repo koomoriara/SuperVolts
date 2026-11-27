@@ -3,7 +3,7 @@ const API_URL = (() => {
   const isLocal = host === "localhost" || host === "127.0.0.1";
   return isLocal
     ? "http://127.0.0.1:3000"
-    : "https://SUA-API.onrender.com"; // Troque pelo endereço gerado pelo Render.
+    : "https://supervolts.onrender.com"; // Troque pelo endereço gerado pelo Render.
 })();
 
 async function requisicaoApi(url, opcoes) {
